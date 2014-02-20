@@ -17,9 +17,9 @@ int main(void)
 	
 	for ( i = 0; i < TAM; i++ )
 	{
-		printf("Ingrese su sueldo: ");
-		scanf("%f", &sueldo[i]);
-		total += sueldo[i]; // t = t + s[i];
+	    printf("Ingrese su sueldo: ");
+            scanf("%f", &sueldo[i]);
+	    total += sueldo[i]; // t = t + s[i];
 	}
 	
 	promedio = total / TAM;
@@ -28,14 +28,14 @@ int main(void)
 	
 	for ( i = 0; i < TAM; i++ )
 	{
-		if ( mayor < sueldo[i] )
-			mayor = sueldo[i];
+	    if ( mayor < sueldo[i] )
+		mayor = sueldo[i];
 	}
 	
 	for ( i = 0; i < TAM; i++ )
 	{
-		if ( menor > sueldo[i] )
-			menor = sueldo[i];
+	    if ( menor > sueldo[i] )
+		menor = sueldo[i];
 	}
 	
 	putchar('\n');
@@ -43,20 +43,20 @@ int main(void)
 	printf("Vector Ingresado:\n");
 	for ( i = 0; i < TAM; i++ )
 	{
-		printf("sueldo[%d] = %.1f\n", i, sueldo[i]);
+	    printf("sueldo[%d] = %.1f\n", i, sueldo[i]);
 	}
 	
 	for ( i = 0; i < TAM; i++ )
 	{
-		for ( j = i; j < TAM; j++ )
+	    for ( j = i; j < TAM; j++ )
+	    {
+		if ( sueldo[j] < sueldo[i] )
 		{
-			if ( sueldo[j] < sueldo[i] )
-			{
-				auxiliar = sueldo[i];
-				sueldo[i] = sueldo[j];
-				sueldo[j] = auxiliar;
-			}
+		    auxiliar = sueldo[i];
+		    sueldo[i] = sueldo[j];
+		    sueldo[j] = auxiliar;
 		}
+	    }
 	}
 	
 	putchar('\n');
@@ -70,7 +70,7 @@ int main(void)
 	printf("Vector Ordenado:\n");
 	for ( i = 0; i < TAM; i++ )
 	{
-		printf("sueldo[%d] = %.1f\n", i, sueldo[i]);
+	    printf("sueldo[%d] = %.1f\n", i, sueldo[i]);
 	}
 	
 	return 0;
